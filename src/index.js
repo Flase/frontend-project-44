@@ -93,7 +93,7 @@ export {gameGCD}
 
 const gameProgression = () => {
     const name = getName()
-    console.log("Find the greatest common divisor of given numbers.")
+    console.log("What number is missing in the progression?")
     let count = 0
     let rightAnswer = 0, playerAnswer = 0
     while (count < 3) {
