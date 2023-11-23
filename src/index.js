@@ -101,18 +101,18 @@ const gameProgression = () => {
         let first = Math.floor(Math.random() * 50) + 1; // start number 1 .. 50 
         let hiddenMemberIndex = Math.floor(Math.random() * 10) // 0 .. 9 index for hide
         let array = [first]
-        let playerString = first.toString()+" "
+        let playerString = ""
 
-        for (let i=1; i < 9; i++){
+        for (let i=1; i < 10; i++){
             array[i] = array[i-1] + difference
             if (i !== hiddenMemberIndex) {
-                playerString += array[i] + " "
+                playerString += `${first + i * difference}`
             } else {
                 playerString += ".. "
+                rightAnswer = first + i * difference
             }
         }
-        rightAnswer = array[hiddenMemberIndex]
-
+        
         playerAnswer = queryQuestion(`${playerString}`)
 
         if (parseInt(playerAnswer) === rightAnswer) {
