@@ -135,8 +135,8 @@ const gamePrime = () => {
     let count = 0
     let rightAnswer = "yes", playerAnswer = ""
     while (count < 3) {
-        let randNumber = Math.floor(Math.random() * 9) + 2; // start number
-        for (let i=2; i<randNumber; i++){
+        let randNumber = Math.floor(Math.random() * 9) + 2; // start number 2 .. 10 
+        for (let i=1; i<randNumber; i++){
             if (randNumber % i === 0) {
                 rightAnswer = "no"
                 break
