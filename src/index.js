@@ -95,16 +95,14 @@ const gameProgression = () => {
     const name = getName()
     console.log("What number is missing in the progression?")
     let count = 0
-    let rightAnswer = 0, playerAnswer = 0
+    let rightAnswer;
     while (count < 3) {
         let difference = Math.floor(Math.random() * 5) + 1; // step 1 .. 5 
         let first = Math.floor(Math.random() * 50) + 1; // start number 1 .. 50 
-        let hiddenMemberIndex = Math.floor(Math.random() * 10) // 0 .. 9 index for hide
-        let array = [first]
+        let hiddenMemberIndex = Math.floor(Math.random() * 11) + 1; // 1 .. 10 index for hide
         let playerString = ""
 
-        for (let i=1; i < 10; i++){
-            array[i] = array[i-1] + difference
+        for (let i=1; i < 11; i++){ // line in 10 numbers 
             if (i !== hiddenMemberIndex) {
                 playerString += `${first + i * difference} `
             } else {
@@ -112,8 +110,7 @@ const gameProgression = () => {
                 rightAnswer = first + i * difference
             }
         }
-        
-        playerAnswer = queryQuestion(`${playerString}`)
+        let playerAnswer = queryQuestion(`${playerString}`)
 
         if (parseInt(playerAnswer) === rightAnswer) {
             count +=1
