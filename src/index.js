@@ -3,25 +3,22 @@ import {
 } from './cli_agent.js';
 
 const gameEven = () => {
-  let count = 0;
   const name = getName();
-
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
-
-  while (count < 3) {
+  // eslint-disable-next-line no-plusplus
+  for (let i = 0; i < 3; i++) {
     const randonNumber = Math.floor(Math.random() * 100) + 1;
     const rightAnswer = randonNumber % 2 === 0 ? 'yes' : 'no';
     const playerAnswer = String(queryQuestion(randonNumber));
 
     if (playerAnswer === rightAnswer) {
-      count += 1;
       correctAnswer();
     } else {
       wrongAnswer(playerAnswer, rightAnswer, name);
       break;
     }
+    if (i === 2) congratulations(name);
   }
-  if (count === 3) congratulations(name);
 };
 
 export { gameEven };
