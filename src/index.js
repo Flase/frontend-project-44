@@ -97,9 +97,9 @@ const gameProgression = () => {
     let count = 0
     let rightAnswer = 0, playerAnswer = 0
     while (count < 3) {
-        let difference = Math.floor(Math.random() * 5) + 1; // step
-        let first = Math.floor(Math.random() * 50) + 1; // start number
-        let hiddenMemberIndex = Math.floor(Math.random() * 10) - 1; // 0 .. 9 index for hide
+        let difference = Math.floor(Math.random() * 5) + 1; // step 1 .. 5 
+        let first = Math.floor(Math.random() * 50) + 1; // start number 1 .. 50 
+        let hiddenMemberIndex = Math.floor(Math.random() * 10) // 0 .. 9 index for hide
         let array = [first]
         let playerString = first.toString()+" "
 
