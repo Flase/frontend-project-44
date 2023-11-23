@@ -1,12 +1,9 @@
 import readlineSync from 'readline-sync';
 
+const cliStart = () => {
+  console.log('Welcome to the Brain Games!');
+  const name = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${name}!`);
+};
 
-
-const cliStart = () =>{
-    let count = 0
-    console.log("Welcome to the Brain Games!")
-    const name = readlineSync.question('May I have your name? ');
-    console.log("Hello, " + name +"!")
-}
-
-export {cliStart}
+export default cliStart;

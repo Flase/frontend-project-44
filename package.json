@@ -4,7 +4,8 @@
   "description": "hexlet first project",
   "main": "./bin/brain-games.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --fix --ext .js,.jsx ."
   },
   "author": "",
   "license": "ISC",
@@ -20,10 +21,12 @@
   "dependencies": {
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.29.0",
+    "jest": "^29.7.0",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
     "eslint": "^8.54.0",
+    "eslint-plugin-jest": "^27.6.0",
     "eslint-plugin-react": "^7.33.2"
   }
 }
