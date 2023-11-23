@@ -106,7 +106,7 @@ const gameProgression = () => {
         for (let i=1; i < 10; i++){
             array[i] = array[i-1] + difference
             if (i !== hiddenMemberIndex) {
-                playerString += `${first + i * difference}`
+                playerString += `${first + i * difference} `
             } else {
                 playerString += ".. "
                 rightAnswer = first + i * difference
